@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Клиенты и поставщики - ООО "СЗЛК Производство"</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/pages.css">
+    <link rel="icon" type="image/x-icon" href="assets/images/logo.png">
+</head>
+<body>
+    <!-- Шапка сайта -->
+<header>
+    <div class="container header-container">
+        <div class="logo">
+            <img src="assets/image/logo.png" alt="СЗЛК ПРОИЗВОДСТВО" class="logo-img">
+            <div class="logo-text">
+                <h1>СЗЛК ПРОИЗВОДСТВО</h1>
+            </div>
+        </div>
+            
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <nav>
+                <ul id="mainMenu">
+                    <li><a href="index.html" class="nav-link">Главная</a></li>
+                    <li><a href="services.html" class="nav-link">Услуги</a></li>
+                    <li><a href="about.html" class="nav-link">О компании</a></li>
+                    <li><a href="clients.html" class="nav-link active">Клиенты</a></li>
+                    <li><a href="registration.html" class="nav-link">Регистрация</a></li>
+                </ul>
+            </nav>
+        </div>
+        
+        <!-- Мобильное меню -->
+        <div class="mobile-menu" id="mobileMenu">
+            <a href="index.html" class="nav-link">Главная</a>
+            <a href="services.html" class="nav-link">Услуги</a>
+            <a href="about.html" class="nav-link">О компании</a>
+            <a href="clients.html" class="nav-link active">Клиенты</a>
+            <a href="registration.html" class="nav-link">Регистрация</a>
+        </div>
+    </header>
+
+    <!-- Breadcrumbs -->
+    <div class="breadcrumbs">
+        <div class="container">
+            <ol>
+                <li><a href="index.html">Главная</a></li>
+                <li class="separator">/</li>
+                <li class="current">Клиенты и поставщики</li>
+            </ol>
+        </div>
+    </div>
+
+    <!-- Главный контент -->
+    <main>
+        <div class="container">
+            <div class="section-title">
+                <h2>Наши клиенты и поставщики</h2>
+                <p>Мы гордимся сотрудничеством с ведущими компаниями России</p>
+            </div>
+            
+            <!-- Статистика сотрудничества -->
+            <section>
+                <div class="cooperation-stats">
+                    <div class="stat-card">
+                        <div class="stat-number">200+</div>
+                        <div class="stat-label">Постоянных клиентов</div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <div class="stat-number">85%</div>
+                        <div class="stat-label">Клиентов продолжают сотрудничество</div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <div class="stat-number">50+</div>
+                        <div class="stat-label">Надежных поставщиков</div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <div class="stat-number">10 лет</div>
+                        <div class="stat-label">Средний срок сотрудничества</div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Клиенты -->
+            <section>
+                <h3 style="margin-bottom: 20px; color: var(--accent);">Наши клиенты</h3>
+                <p style="margin-bottom: 30px;">Мы работаем с крупнейшими компаниями России, предоставляя им полный спектр тендерных услуг.</p>
+                
+                <table class="suppliers-table">
+                    <thead>
+                        <tr>
+                            <th>Компания</th>
+                            <th>Сфера деятельности</th>
+                            <th>Сотрудничество</th>
+                            <th>Объем контрактов</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>ПАО "Газпром"</strong></td>
+                            <td>Нефтегазовая промышленность</td>
+                            <td>С 2012 года</td>
+                            <td>Более 2 млрд руб.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>АО "Россети"</strong></td>
+                            <td>Энергетика</td>
+                            <td>С 2014 года</td>
+                            <td>Более 1.5 млрд руб.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>ОАО "РЖД"</strong></td>
+                            <td>Железнодорожные перевозки</td>
+                            <td>С 2015 года</td>
+                            <td>Более 1 млрд руб.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Минздрав РФ</strong></td>
+                            <td>Здравоохранение</td>
+                            <td>С 2016 года</td>
+                            <td>Более 800 млн руб.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>ПАО "Сбербанк"</strong></td>
+                            <td>Банковские услуги</td>
+                            <td>С 2018 года</td>
+                            <td>Более 500 млн руб.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>АО "Росатом"</strong></td>
+                            <td>Атомная энергетика</td>
+                            <td>С 2019 года</td>
+                            <td>Более 700 млн руб.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>АО "Ростех"</strong></td>
+                            <td>Промышленность</td>
+                            <td>С 2017 года</td>
+                            <td>Более 600 млн руб.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>ПАО "Лукойл"</strong></td>
+                            <td>Нефтегазовая отрасль</td>
+                            <td>С 2020 года</td>
+                            <td>Более 400 млн руб.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+            
+            <!-- Поставщики -->
+            <section>
+                <h3 style="margin: 40px 0 20px; color: var(--accent);">Поставщики оборудования</h3>
+                <p style="margin-bottom: 30px;">Мы сотрудничаем с проверенными поставщиками качественного оборудования и материалов.</p>
+                
+                <table class="suppliers-table">
+                    <thead>
+                        <tr>
+                            <th>Компания</th>
+                            <th>Тип оборудования</th>
+                            <th>Сотрудничество</th>
+                            <th>Сертификаты</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>ООО "Промтехника"</strong></td>
+                            <td>Промышленное оборудование</td>
+                            <td>С 2011 года</td>
+                            <td>ISO 9001, ГОСТ Р</td>
+                        </tr>
+                        <tr>
+                            <td><strong>ЗАО "Медтехсервис"</strong></td>
+                            <td>Медицинское оборудование</td>
+                            <td>С 2013 года</td>
+                            <td>ISO 13485, Росздравнадзор</td>
+                        </tr>
+                        <tr>
+                            <td><strong>АО "Энергомаш"</strong></td>
+                            <td>Электрооборудование</td>
+                            <td>С 2014 года</td>
+                            <td>ISO 9001, СРО</td>
+                        </tr>
+                        <tr>
+                            <td><strong>ООО "Стройкомплект"</strong></td>
+                            <td>Строительные материалы</td>
+                            <td>С 2015 года</td>
+                            <td>ГОСТ, технические регламенты</td>
+                        </tr>
+                        <tr>
+                            <td><strong>ПАО "Камаз"</strong></td>
+                            <td>Спецтехника и автомобили</td>
+                            <td>С 2017 года</td>
+                            <td>ОТТС, сертификаты соответствия</td>
+                        </tr>
+                        <tr>
+                            <td><strong>ООО "ИТ-Решения"</strong></td>
+                            <td>Компьютерное оборудование</td>
+                            <td>С 2020 года</td>
+                            <td>FSTEC, сертификаты ФСБ</td>
+                        </tr>
+                        <tr>
+                            <td><strong>ООО "Химкомплект"</strong></td>
+                            <td>Химические реагенты</td>
+                            <td>С 2018 года</td>
+                            <td>Сертификаты безопасности</td>
+                        </tr>
+                        <tr>
+                            <td><strong>АО "Металлопрокат"</strong></td>
+                            <td>Металлопрокат</td>
+                            <td>С 2016 года</td>
+                            <td>ГОСТ, сертификаты качества</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+            
+            <!-- Отзывы клиентов -->
+            <section>
+                <div class="section-title">
+                    <h3>Отзывы клиентов</h3>
+                    <p>Что говорят о нас наши партнеры</p>
+                </div>
+                
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <div class="service-content">
+                            <h3>ПАО "Газпром"</h3>
+                            <p>"ООО 'СЗЛК Производство' является нашим надежным партнером в сфере тендерных закупок уже более 10 лет. Профессиональный подход и высокое качество услуг позволяют нам оптимизировать процессы закупок."</p>
+                            <p class="testimonial-author">— Иванов А.С., Руководитель отдела закупок</p>
+                        </div>
+                    </div>
+                    
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <div class="service-content">
+                            <h3>АО "Россети"</h3>
+                            <p>"Благодаря сотрудничеству с ООО 'СЗЛК Производство' мы значительно увеличили процент выигранных тендеров. Особенно ценим юридическое сопровождение и оперативность работы."</p>
+                            <p class="testimonial-author">— Петрова М.В., Директор по закупкам</p>
+                        </div>
+                    </div>
+                    
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <div class="service-content">
+                            <h3>ОАО "РЖД"</h3>
+                            <p>"Работаем с компанией с 2015 года. За это время выполнили более 50 успешных проектов. Рекомендуем как надежного и профессионального партнера в сфере госзакупок."</p>
+                            <p class="testimonial-author">— Сидоров П.Н., Начальник управления снабжения</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- CTA секция -->
+            <section class="cta-section">
+                <div class="cta-content">
+                    <h2>Станьте нашим клиентом или поставщиком</h2>
+                    <p>Присоединяйтесь к числу наших партнеров и получите профессиональное сопровождение ваших тендеров</p>
+                    <a href="registration.html" class="btn btn-primary">Зарегистрироваться</a>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Футер -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>ООО "СЗЛК Производство"</h3>
+                    <p>Профессиональное сопровождение тендеров и госзакупок. Надежный партнер для вашего бизнеса.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-vk"></i></a>
+                        <a href="#"><i class="fab fa-telegram"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Контакты</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> Москва, ул. Тверская, д. 15</p>
+                    <p><i class="fas fa-phone"></i> +7 (495) 123-45-67</p>
+                    <p><i class="fas fa-envelope"></i> info@szlk-production.ru</p>
+                    <p><i class="fas fa-clock"></i> Пн-Пт: 9:00 - 18:00</p>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Быстрые ссылки</h3>
+                    <a href="index.html">Главная</a>
+                    <a href="services.html">Услуги</a>
+                    <a href="about.html">О компании</a>
+                    <a href="clients.html">Клиенты</a>
+                    <a href="registration.html">Регистрация</a>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; <span id="currentYear">2023</span> ООО "СЗЛК Производство". Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+</html>

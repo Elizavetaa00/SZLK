@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Регистрация - ООО "СЗЛК Производство"</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/pages.css">
+    <link rel="icon" type="image/x-icon" href="assets/images/logo.png">
+</head>
+<body>
+    <!-- Шапка сайта -->
+<header>
+    <div class="container header-container">
+        <div class="logo">
+            <img src="assets/image/logo.png" alt="СЗЛК ПРОИЗВОДСТВО" class="logo-img">
+            <div class="logo-text">
+                <h1>СЗЛК ПРОИЗВОДСТВО</h1>
+            </div>
+        </div>
+            
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <nav>
+                <ul id="mainMenu">
+                    <li><a href="index.html" class="nav-link">Главная</a></li>
+                    <li><a href="services.html" class="nav-link">Услуги</a></li>
+                    <li><a href="about.html" class="nav-link">О компании</a></li>
+                    <li><a href="clients.html" class="nav-link">Клиенты</a></li>
+                    <li><a href="registration.html" class="nav-link active">Регистрация</a></li>
+                </ul>
+            </nav>
+        </div>
+        
+        <!-- Мобильное меню -->
+        <div class="mobile-menu" id="mobileMenu">
+            <a href="index.html" class="nav-link">Главная</a>
+            <a href="services.html" class="nav-link">Услуги</a>
+            <a href="about.html" class="nav-link">О компании</a>
+            <a href="clients.html" class="nav-link">Клиенты</a>
+            <a href="registration.html" class="nav-link active">Регистрация</a>
+        </div>
+    </header>
+
+    <!-- Breadcrumbs -->
+    <div class="breadcrumbs">
+        <div class="container">
+            <ol>
+                <li><a href="index.html">Главная</a></li>
+                <li class="separator">/</li>
+                <li class="current">Регистрация</li>
+            </ol>
+        </div>
+    </div>
+
+    <!-- Главный контент -->
+    <main>
+        <div class="container">
+            <div class="section-title">
+                <h2>Регистрация</h2>
+                <p>Заполните форму для сотрудничества с нашей компанией</p>
+            </div>
+
+            <!-- Форма регистрации -->
+            <section>
+                <div class="registration-form">
+                    <form id="registrationForm">
+                        <div id="formMessage"></div>
+                        
+                        <div class="form-group">
+                            <label for="registrationType" class="required">Тип регистрации</label>
+                            <select id="registrationType" name="registrationType" class="form-control" required>
+                                <option value="">Выберите тип регистрации</option>
+                                <option value="client">Клиент (хочу выигрывать тендеры)</option>
+                                <option value="supplier">Поставщик (хочу поставлять оборудование)</option>
+                                <option value="partner">Партнер (сотрудничество на партнерских условиях)</option>
+                                <option value="consultation">Консультация (нужна консультация по тендерам)</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="contactPerson" class="required">Контактное лицо</label>
+                            <input type="text" id="contactPerson" name="contactPerson" class="form-control" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone" class="required">Телефон</label>
+                            <input type="tel" id="phone" name="phone" class="form-control" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email" class="required">Email</label>
+                            <input type="email" id="email" name="email" class="form-control" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="industry">Отрасль деятельности</label>
+                            <select id="industry" name="industry" class="form-control">
+                                <option value="">Выберите отрасль</option>
+                                <option value="industry">Промышленность</option>
+                                <option value="energy">Энергетика</option>
+                                <option value="construction">Строительство</option>
+                                <option value="medicine">Медицина</option>
+                                <option value="it">IT-технологии</option>
+                                <option value="transport">Транспорт и логистика</option>
+                                <option value="other">Другое</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="products">Основная продукция/услуги</label>
+                            <textarea id="products" name="products" class="form-control" rows="3" placeholder="Опишите кратко основную продукцию или услуги вашей компании"></textarea>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="experience">Опыт участия в тендерах</label>
+                            <select id="experience" name="experience" class="form-control">
+                                <option value="">Выберите вариант</option>
+                                <option value="none">Нет опыта</option>
+                                <option value="little">Мало опыта (1-5 тендеров)</option>
+                                <option value="medium">Средний опыт (6-20 тендеров)</option>
+                                <option value="high">Большой опыт (более 20 тендеров)</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Дополнительная информация</label>
+                            <textarea id="message" name="message" class="form-control" rows="4" placeholder="Опишите цели сотрудничества, специфические требования или задайте вопросы"></textarea>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>
+                                <input type="checkbox" name="agreement" required>
+                                Я согласен с <a href="#" onclick="showPrivacyPolicy()">политикой конфиденциальности</a> и обработкой персональных данных
+                            </label>
+                        </div>
+                        
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-primary" style="width: 100%;">
+                                <i class="fas fa-paper-plane"></i> Отправить заявку
+                            </button>
+                        </div>
+                    </form>
+                    
+                    <div class="privacy-policy">
+                        <p><strong>Политика конфиденциальности:</strong> Мы гарантируем конфиденциальность предоставленных данных и используем их исключительно для целей сотрудничества. Ваши данные не будут переданы третьим лицам без вашего согласия.</p>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Контакты -->
+            <section>
+                <div class="section-title">
+                    <h3>Контакты для связи</h3>
+                    <p>Вы также можете связаться с нами напрямую</p>
+                </div>
+                
+                <div class="advantages-grid">
+                    <div class="advantage-card">
+                        <div class="advantage-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <h3>Телефон</h3>
+                        <p>+7 (495) 123-45-67</p>
+                        <p>Пн-Пт: 9:00 - 18:00</p>
+                    </div>
+                    
+                    <div class="advantage-card">
+                        <div class="advantage-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <h3>Email</h3>
+                        <p>info@szlk-production.ru</p>
+                        <p>partners@szlk-production.ru</p>
+                    </div>
+                    
+                    <div class="advantage-card">
+                        <div class="advantage-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <h3>Адрес</h3>
+                        <p>Москва, ул. Тверская, д. 15</p>
+                        <p>Бизнес-центр "Тверской"</p>
+                    </div>
+                    
+                    <div class="advantage-card">
+                        <div class="advantage-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <h3>Время работы</h3>
+                        <p>Понедельник - Пятница</p>
+                        <p>9:00 - 18:00</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Футер -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>ООО "СЗЛК Производство"</h3>
+                    <p>Профессиональное сопровождение тендеров и госзакупок. Надежный партнер для вашего бизнеса.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-vk"></i></a>
+                        <a href="#"><i class="fab fa-telegram"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Контакты</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> Москва, ул. Тверская, д. 15</p>
+                    <p><i class="fas fa-phone"></i> +7 (495) 123-45-67</p>
+                    <p><i class="fas fa-envelope"></i> info@szlk-production.ru</p>
+                    <p><i class="fas fa-clock"></i> Пн-Пт: 9:00 - 18:00</p>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Быстрые ссылки</h3>
+                    <a href="index.html">Главная</a>
+                    <a href="services.html">Услуги</a>
+                    <a href="about.html">О компании</a>
+                    <a href="clients.html">Клиенты</a>
+                    <a href="registration.html">Регистрация</a>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; <span id="currentYear">2023</span> ООО "СЗЛК Производство". Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+    <script src="js/form-validation.js"></script>
+    <script>
+
+        // Дополнительные функции для страницы регистрации
+        function selectRegistrationType(type) {
+            const select = document.getElementById('registrationType');
+            select.value = type;
+            select.dispatchEvent(new Event('change'));
+            
+            // Прокрутка к форме
+            document.querySelector('.registration-form').scrollIntoView({
+                behavior: 'smooth'
+            });
+        }
+        
+        function showPrivacyPolicy() {
+            alert('Политика конфиденциальности:\n\nМы гарантируем конфиденциальность предоставленных данных и используем их исключительно для целей сотрудничества. Ваши данные не будут переданы третьим лицам без вашего согласия.\n\nВсе данные хранятся в зашифрованном виде и защищены в соответствии с Федеральным законом №152-ФЗ "О персональных данных".');
+        }
+        
+        // Инициализация маски для телефона
+        document.addEventListener('DOMContentLoaded', function() {
+            const phoneInput = document.getElementById('phone');
+            if (phoneInput) {
+                phoneInput.addEventListener('input', function(e) {
+                    let value = e.target.value.replace(/\D/g, '');
+                    
+                    if (value.length > 0) {
+                        value = '+7' + value.substring(1);
+                        
+                        if (value.length > 2) {
+                            value = value.substring(0, 2) + ' (' + value.substring(2);
+                        }
+                        if (value.length > 7) {
+                            value = value.substring(0, 7) + ') ' + value.substring(7);
+                        }
+                        if (value.length > 12) {
+                            value = value.substring(0, 12) + '-' + value.substring(12);
+                        }
+                        if (value.length > 15) {
+                            value = value.substring(0, 15) + '-' + value.substring(15);
+                        }
+                        if (value.length > 18) {
+                            value = value.substring(0, 18);
+                        }
+                    }
+                    
+                    e.target.value = value;
+                });
+            }
+        });
+    </script>
+</body>
+</html>
