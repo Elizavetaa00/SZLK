@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>О компании - ООО "СЗЛК Производство"</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="icon" type="image/x-icon" href="assets/images/logo.png">
+    <style>
+        /* Дополнительные стили для страницы "О компании" */
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 50px auto;
+        }
+        
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 4px;
+            background-color: var(--primary);
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -2px;
+        }
+        
+        .timeline-item {
+            padding: 10px 40px;
+            position: relative;
+            width: 50%;
+            box-sizing: border-box;
+        }
+        
+        .timeline-item:nth-child(odd) {
+            left: 0;
+        }
+        
+        .timeline-item:nth-child(even) {
+            left: 50%;
+        }
+        
+        .timeline-content {
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            position: relative;
+        }
+        
+        .timeline-item:nth-child(odd) .timeline-content::after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            right: -10px;
+            background-color: white;
+            top: 50%;
+            transform: translateY(-50%) rotate(45deg);
+            box-shadow: 2px -2px 5px rgba(0, 0, 0, 0.05);
+        }
+        
+        .timeline-item:nth-child(even) .timeline-content::after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            left: -10px;
+            background-color: white;
+            top: 50%;
+            transform: translateY(-50%) rotate(45deg);
+            box-shadow: -2px 2px 5px rgba(0, 0, 0, 0.05);
+        }
+        
+        .timeline-year {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background-color: var(--primary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.2rem;
+            z-index: 1;
+        }
+        
+        .timeline-item:nth-child(odd) .timeline-year {
+            right: -50px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        
+        .timeline-item:nth-child(even) .timeline-year {
+            left: -50px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .team-card {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            text-align: center;
+            transition: transform 0.3s;
+        }
+        
+        .team-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .team-photo {
+            height: 200px;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 4rem;
+        }
+        
+        .team-info {
+            padding: 20px;
+        }
+        
+        .team-info h4 {
+            color: var(--accent);
+            margin-bottom: 5px;
+        }
+        
+        .team-info .position {
+            color: var(--primary);
+            font-weight: 500;
+            margin-bottom: 10px;
+        }
+        
+        .team-info .experience {
+            color: var(--gray);
+            font-size: 0.9rem;
+        }
+        
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .value-card {
+            text-align: center;
+            padding: 30px 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .value-icon {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+        
+        .value-card h4 {
+            color: var(--accent);
+            margin-bottom: 15px;
+        }
+        
+        @media (max-width: 768px) {
+            .timeline::after {
+                left: 31px;
+            }
+            
+            .timeline-item {
+                width: 100%;
+                padding-left: 70px;
+                padding-right: 25px;
+            }
+            
+            .timeline-item:nth-child(even) {
+                left: 0;
+            }
+            
+            .timeline-item:nth-child(odd) .timeline-year,
+            .timeline-item:nth-child(even) .timeline-year {
+                left: 10px;
+                right: auto;
+            }
+            
+            .timeline-item:nth-child(odd) .timeline-content::after,
+            .timeline-item:nth-child(even) .timeline-content::after {
+                left: -10px;
+                right: auto;
+            }
+        }
+        
+        .mission-section {
+            background: linear-gradient(135deg, rgba(26, 95, 122, 0.05), rgba(87, 197, 182, 0.05));
+            padding: 60px;
+            border-radius: 15px;
+            margin: 40px 0;
+        }
+        
+        .mission-content {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .mission-icon {
+            font-size: 4rem;
+            color: var(--primary);
+            margin-bottom: 30px;
+        }
+        
+        .mission-content h3 {
+            color: var(--accent);
+            margin-bottom: 20px;
+            font-size: 2rem;
+        }
+        
+        .mission-content p {
+            font-size: 1.2rem;
+            line-height: 1.8;
+        }
+    </style>
+</head>
+<body>
+    <!-- Шапка сайта -->
+<header>
+    <div class="container header-container">
+        <div class="logo">
+            <img src="assets/image/logo.png" alt="СЗЛК ПРОИЗВОДСТВО" class="logo-img">
+            <div class="logo-text">
+                <h1>СЗЛК ПРОИЗВОДСТВО</h1>
+            </div>
+        </div>
+            
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <nav>
+                <ul id="mainMenu">
+                    <li><a href="index.html" class="nav-link">Главная</a></li>
+                    <li><a href="services.html" class="nav-link">Услуги</a></li>
+                    <li><a href="about.html" class="nav-link active">О компании</a></li>
+                    <li><a href="clients.html" class="nav-link">Клиенты</a></li>
+                    <li><a href="registration.html" class="nav-link">Регистрация</a></li>
+                </ul>
+            </nav>
+        </div>
+        
+        <!-- Мобильное меню -->
+        <div class="mobile-menu" id="mobileMenu">
+            <a href="index.html" class="nav-link">Главная</a>
+            <a href="services.html" class="nav-link">Услуги</a>
+            <a href="about.html" class="nav-link active">О компании</a>
+            <a href="clients.html" class="nav-link">Клиенты</a>
+            <a href="registration.html" class="nav-link">Регистрация</a>
+        </div>
+    </header>
+
+    <!-- Breadcrumbs -->
+    <div class="breadcrumbs">
+        <div class="container">
+            <ol>
+                <li><a href="index.html">Главная</a></li>
+                <li class="separator">/</li>
+                <li class="current">О компании</li>
+            </ol>
+        </div>
+    </div>
+
+    <!-- Главный контент -->
+    <main>
+        <div class="container">
+            <div class="section-title">
+                <h2>О компании</h2>
+                <p>ООО "СЗЛК Производство" - надежный партнер в сфере тендеров с 2010 года</p>
+            </div>
+            
+            <!-- О компании -->
+            <section>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p>ООО "СЗЛК Производство" основана в 2010 году и за более чем 10 лет работы стала одним из лидеров в области тендерного сопровождения и госзакупок в России.</p>
+                        
+                        <p>Мы специализируемся на комплексном сопровождении участия в тендерах, аукционах и конкурсах для предприятий различных отраслей промышленности, строительства, медицины и IT.</p>
+                        
+                        <p>Наша миссия - помогать российским предприятиям эффективно участвовать в госзакупках и коммерческих тендерах, минимизируя риски и увеличивая шансы на победу.</p>
+                        
+                        <p>Сегодня в нашей команде работает более 35 высококвалифицированных специалистов: юристы, экономисты, эксперты по госзакупкам, которые имеют многолетний опыт успешной работы на рынке тендерных услуг.</p>
+                    </div>
+                    
+                    <div class="about-image">
+                        <i class="fas fa-building"></i>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Миссия и ценности -->
+            <section class="mission-section">
+                <div class="mission-content">
+                    <div class="mission-icon">
+                        <i class="fas fa-bullseye"></i>
+                    </div>
+                    <h3>Наша миссия</h3>
+                    <p>Мы помогаем предприятиям эффективно участвовать в государственных и коммерческих закупках, обеспечивая профессиональное сопровождение на всех этапах тендерного процесса, что позволяет нашим клиентам концентрироваться на основном бизнесе, минимизировать риски и увеличивать прибыль.</p>
+                </div>
+            </section>
+            
+            <!-- История компании -->
+            <section>
+                <div class="section-title">
+                    <h3>История компании</h3>
+                    <p>Путь развития от небольшой компании до лидера рынка</p>
+                </div>
+                
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-year">2010</div>
+                        <div class="timeline-content">
+                            <h4>Основание компании</h4>
+                            <p>Основание ООО "СЗЛК Производство" с фокусом на поставках промышленного оборудования через участие в госзакупках.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-year">2012</div>
+                        <div class="timeline-content">
+                            <h4>Первые крупные контракты</h4>
+                            <p>Заключение первых крупных контрактов с государственными предприятиями, расширение клиентской базы.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-year">2015</div>
+                        <div class="timeline-content">
+                            <h4>Расширение услуг</h4>
+                            <p>Расширение спектра услуг: добавление юридического сопровождения и консультационных услуг по госзакупкам.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-year">2018</div>
+                        <div class="timeline-content">
+                            <h4>Выход на федеральный уровень</h4>
+                            <p>Начало работы с клиентами по всей России, открытие представительств в 5 регионах страны.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-year">2021</div>
+                        <div class="timeline-content">
+                            <h4>Цифровая трансформация</h4>
+                            <p>Внедрение собственной CRM-системы для управления тендерными заявками, автоматизация процессов.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-year">2023</div>
+                        <div class="timeline-content">
+                            <h4>Лидер рынка</h4>
+                            <p>Более 1200 успешно завершенных тендеров, портфель постоянных клиентов превышает 200 компаний.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Команда -->
+            <section>
+                <div class="section-title">
+                    <h3>Наша команда</h3>
+                    <p>Профессионалы с многолетним опытом в сфере госзакупок</p>
+                </div>
+                
+                <div class="team-grid">
+                    <div class="team-card">
+                        <div class="team-photo">
+                            <i class="fas fa-user-tie"></i>
+                        </div>
+                        <div class="team-info">
+                            <h4>Иванов Петр Сергеевич</h4>
+                            <p class="position">Генеральный директор</p>
+                            <p class="experience">Опыт работы в госзакупках: 15 лет</p>
+                            <p>Кандидат экономических наук, автор методик оценки тендерных рисков.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="team-card">
+                        <div class="team-photo">
+                            <i class="fas fa-female"></i>
+                        </div>
+                        <div class="team-info">
+                            <h4>Смирнова Анна Владимировна</h4>
+                            <p class="position">Руководитель тендерного отдела</p>
+                            <p class="experience">Опыт работы в госзакупках: 12 лет</p>
+                            <p>Сертифицированный специалист по 44-ФЗ и 223-ФЗ, эксперт по электронным торгам.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="team-card">
+                        <div class="team-photo">
+                            <i class="fas fa-male"></i>
+                        </div>
+                        <div class="team-info">
+                            <h4>Козлов Андрей Николаевич</h4>
+                            <p class="position">Главный юрист</p>
+                            <p class="experience">Опыт работы в госзакупках: 10 лет</p>
+                            <p>Специалист по оспариванию действий заказчиков в ФАС и арбитражных судах.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="team-card">
+                        <div class="team-photo">
+                            <i class="fas fa-user-tie"></i>
+                        </div>
+                        <div class="team-info">
+                            <h4>Петров Михаил Иванович</h4>
+                            <p class="position">Руководитель отдела поставок</p>
+                            <p class="experience">Опыт работы в логистике: 18 лет</p>
+                            <p>Эксперт по организации поставок сложного промышленного оборудования.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Ценности -->
+            <section>
+                <div class="section-title">
+                    <h3>Наши ценности</h3>
+                    <p>Принципы, которые определяют нашу работу</p>
+                </div>
+                
+                <div class="values-grid">
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <i class="fas fa-user-tie"></i>
+                        </div>
+                        <h4>Профессионализм</h4>
+                        <p>Постоянное обучение сотрудников, глубокие знания законодательства и практики госзакупок.</p>
+                    </div>
+                    
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h4>Надежность</h4>
+                        <p>Ответственный подход к каждому проекту, выполнение обязательств в установленные сроки.</p>
+                    </div>
+                    
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <i class="fas fa-lock"></i>
+                        </div>
+                        <h4>Конфиденциальность</h4>
+                        <p>Полная защита коммерческой информации клиентов, работа по договору NDA.</p>
+                    </div>
+                    
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <h4>Партнерство</h4>
+                        <p>Долгосрочные отношения с клиентами, индивидуальный подход к каждому проекту.</p>
+                    </div>
+                    
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+                        <h4>Инновации</h4>
+                        <p>Постоянное внедрение новых технологий и методик для повышения эффективности работы.</p>
+                    </div>
+                    
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h4>Результативность</h4>
+                        <p>Ориентация на конкретные результаты, прозрачная отчетность о проделанной работе.</p>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Достижения -->
+            <section>
+                <div class="section-title">
+                    <h3>Наши достижения</h3>
+                </div>
+                
+                <div class="achievements-grid">
+                    <div class="achievement-card">
+                        <div class="achievement-icon">
+                            <i class="fas fa-trophy"></i>
+                        </div>
+                        <h4>Более 1200 успешных тендеров</h4>
+                        <p>За всю историю работы компании</p>
+                    </div>
+                    
+                    <div class="achievement-card">
+                        <div class="achievement-icon">
+                            <i class="fas fa-user-tie"></i>
+                        </div>
+                        <h4>35 специалистов</h4>
+                        <p>Высококвалифицированных сотрудников</p>
+                    </div>
+                    
+                    <div class="achievement-card">
+                        <div class="achievement-icon">
+                            <i class="fas fa-chart-pie"></i>
+                        </div>
+                        <h4>70% успешных участий</h4>
+                        <p>Выигранных тендеров от общего количества</p>
+                    </div>
+                    
+                    <div class="achievement-card">
+                        <div class="achievement-icon">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <h4>85% постоянных клиентов</h4>
+                        <p>Которые продолжают с нами сотрудничество</p>
+                    </div>
+                </div>
+                
+                <div class="text-center" style="margin-top: 40px;">
+                    <a href="registration.html" class="btn btn-primary">Сотрудничать с нами</a>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Футер -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>ООО "СЗЛК Производство"</h3>
+                    <p>Профессиональное сопровождение тендеров и госзакупок. Надежный партнер для вашего бизнеса.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-vk"></i></a>
+                        <a href="#"><i class="fab fa-telegram"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Контакты</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> Москва, ул. Тверская, д. 15</p>
+                    <p><i class="fas fa-phone"></i> +7 (495) 123-45-67</p>
+                    <p><i class="fas fa-envelope"></i> info@szlk-production.ru</p>
+                    <p><i class="fas fa-clock"></i> Пн-Пт: 9:00 - 18:00</p>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Быстрые ссылки</h3>
+                    <a href="index.html">Главная</a>
+                    <a href="services.html">Услуги</a>
+                    <a href="about.html">О компании</a>
+                    <a href="clients.html">Клиенты</a>
+                    <a href="registration.html">Регистрация</a>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2023 ООО "СЗЛК Производство". Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
