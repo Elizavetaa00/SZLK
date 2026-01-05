@@ -1,0 +1,168 @@
+/* Адаптивные стили */
+
+/* Планшеты и небольшие ноутбуки */
+@media (max-width: 992px) {
+    .hero h2 {
+        font-size: 2.2rem;
+    }
+    
+    .section-title h2 {
+        font-size: 1.8rem;
+    }
+    
+    .cta-content h2 {
+        font-size: 1.8rem;
+    }
+    
+    .service-detail {
+        padding: 30px;
+    }
+}
+
+/* Планшеты в портретном режиме и большие телефоны */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: row;
+        padding: 10px 0;
+    }
+    
+    .logo-text h1 {
+        font-size: 1.3rem;
+    }
+    
+    .logo-text span {
+        font-size: 0.8rem;
+    }
+    
+    nav ul {
+        display: none;
+    }
+    
+    .mobile-menu-btn {
+        display: block;
+    }
+    
+    .hero {
+        padding: 60px 0;
+    }
+    
+    .hero h2 {
+        font-size: 1.8rem;
+    }
+    
+    .hero p {
+        font-size: 1.1rem;
+    }
+    
+    .services-grid, .clients-grid, .advantages-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    section {
+        padding: 40px 0;
+    }
+    
+    .advantages-section {
+        padding: 30px 20px;
+    }
+    
+    .registration-form {
+        padding: 25px;
+    }
+    
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .suppliers-table {
+        display: block;
+        overflow-x: auto;
+    }
+    
+    .breadcrumbs ol {
+        font-size: 0.9rem;
+    }
+    
+    .timeline::after {
+        left: 31px;
+    }
+    
+    .timeline-item {
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 25px;
+    }
+    
+    .timeline-item:nth-child(even) {
+        left: 0;
+    }
+    
+    .timeline-item:nth-child(odd) .timeline-year,
+    .timeline-item:nth-child(even) .timeline-year {
+        left: 10px;
+        right: auto;
+    }
+    
+    .timeline-item:nth-child(odd) .timeline-content::after,
+    .timeline-item:nth-child(even) .timeline-content::after {
+        left: -10px;
+        right: auto;
+    }
+    
+    .team-grid, .values-grid, .achievements-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .mission-section {
+        padding: 40px 20px;
+    }
+}
+
+/* Мобильные телефоны */
+@media (max-width: 576px) {
+    .container {
+        padding: 0 15px;
+    }
+    
+    .hero h2 {
+        font-size: 1.6rem;
+    }
+    
+    .hero p {
+        font-size: 1rem;
+    }
+    
+    .btn {
+        padding: 10px 25px;
+        font-size: 0.9rem;
+    }
+    
+    .section-title h2 {
+        font-size: 1.6rem;
+    }
+    
+    .service-content, .client-card, .achievement-card {
+        padding: 20px;
+    }
+    
+    .footer-column h3 {
+        font-size: 1.2rem;
+    }
+    
+    .registration-form {
+        padding: 20px;
+    }
+    
+    .form-control {
+        padding: 10px 12px;
+    }
+    
+    .scroll-to-top {
+        width: 40px;
+        height: 40px;
+        bottom: 15px;
+        right: 15px;
+    }
+}
